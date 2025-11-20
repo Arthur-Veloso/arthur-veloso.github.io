@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Tailwind CSS Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Top Edit Button -->
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-end py-4">
+                <a href="#" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Edit on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row">
+            <!-- Sidebar - Hidden on mobile, shown on lg+ -->
+            <div class="lg:w-64 lg:flex-shrink-0 lg:pr-8 lg:py-8">
+                <nav class="hidden lg:block sticky top-8">
+                    <div class="space-y-1">
+                        <!-- Getting Started Section -->
+                        <div class="mb-6">
+                            <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                                Getting Started
+                            </h3>
+                            <div class="space-y-1">
+                                <a href="#introduction" class="group flex items-center px-3 py-2 text-sm font-medium text-gray-900 rounded-md hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 transition-colors duration-200">
+                                    <span class="truncate">Introduction</span>
+                                </a>
+                                <a href="#installation" class="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 transition-colors duration-200">
+                                    <span class="truncate">Installation</span>
+                                </a>
+                                <a href="#configuration" class="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 transition-colors duration-200">
+                                    <span class="truncate">Configuration</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Core Concepts Section -->
+                        <div class="mb-6">
+                            <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                                Core Concepts
+                            </h3>
+                            <div class="space-y-1">
+                                <a href="#utility-first" class="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 transition-colors duration-200">
+                                    <span class="truncate">Utility-First</span>
+                                </a>
+                                <a href="#responsive-design" class="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 transition-colors duration-200">
+                                    <span class="truncate">Responsive Design</span>
+                                </a>
+                                <a href="#hover-focus" class="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 transition-colors duration-200">
+                                    <span class="truncate">Hover & Focus</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Customization Section -->
+                        <div class="mb-6">
+                            <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                                Customization
+                            </h3>
+                            <div class="space-y-1">
+                                <a href="#custom-colors" class="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 transition-colors duration-200">
+                                    <span class="truncate">Custom Colors</span>
+                                </a>
+                                <a href="#plugins" class="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 transition-colors duration-200">
+                                    <span class="truncate">Plugins</span>
+                                </a>
+                                <a href="#advanced-config" class="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 transition-colors duration-200">
+                                    <span class="truncate">Advanced Config</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <main class="flex-1 min-w-0 py-8">
+                <div class="max-w-prose mx-auto">
+                    <!-- Introduction Section -->
+                    <section id="introduction" class="mb-12">
+                        <h1 class="text-3xl font-bold text-gray-900 mb-6">Tailwind CSS Documentation</h1>
+                        <p class="text-lg text-gray-600 mb-6">
+                            A utility-first CSS framework packed with classes like <code class="bg-gray-100 px-1 py-0.5 rounded text-sm font-mono">flex</code>, <code class="bg-gray-100 px-1 py-0.5 rounded text-sm font-mono">pt-4</code>, <code class="bg-gray-100 px-1 py-0.5 rounded text-sm font-mono">text-center</code> and <code class="bg-gray-100 px-1 py-0.5 rounded text-sm font-mono">rotate-90</code> that can be composed to build any design, directly in your markup.
+                        </p>
+                        
+                        <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">What is Tailwind CSS?</h2>
+                        <p class="text-gray-700 mb-4">
+                            Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            Unlike traditional CSS frameworks like Bootstrap or Foundation, Tailwind doesn't come with pre-designed components. Instead, it provides utility classes that let you build your own unique designs.
+                        </p>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-blue-700">
+                                        <strong>Pro Tip:</strong> Use the Tailwind CSS IntelliSense extension in VS Code for autocomplete and syntax highlighting.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Installation Section -->
+                    <section id="installation" class="mb-12">
+                        <h2 class="text-2xl font-semibold text-gray-900 mb-6">Installation</h2>
+                        
+                        <h3 class="text-xl font-medium text-gray-900 mt-6 mb-4">Using CDN</h3>
+                        <p class="text-gray-700 mb-4">
+                            For quick prototyping or simple projects, you can include Tailwind directly from the CDN:
+                        </p>
+                        <div class="bg-gray-800 rounded-lg p-4 mb-6">
+                            <pre class="text-sm text-gray-200 overflow-x-auto"><code>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</code></pre>
+                        </div>
+
+                        <h3 class="text-xl font-medium text-gray-900 mt-6 mb-4">Using npm</h3>
+                        <p class="text-gray-700 mb-4">
+                            For production projects, we recommend installing Tailwind as a PostCSS plugin:
+                        </p>
+                        <div class="bg-gray-800 rounded-lg p-4 mb-6">
+                            <pre class="text-sm text-gray-200 overflow-x-auto"><code>npm install -D tailwindcss
+npx tailwindcss init</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Utility-First Section -->
+                    <section id="utility-first" class="mb-12">
+                        <h2 class="text-2xl font-semibold text-gray-900 mb-6">Utility-First Fundamentals</h2>
+                        
+                        <p class="text-gray-700 mb-4">
+                            Instead of writing custom CSS, you build components by combining utility classes:
+                        </p>
+                        
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                            <h4 class="text-lg font-medium text-gray-900 mb-4">Example Button</h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                        Primary Button
+                                    </button>
+                                </div>
+                                <div class="bg-gray-800 rounded-lg p-4">
+                                    <pre class="text-sm text-gray-200 overflow-x-auto"><code>&lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;
+    Primary Button
+&lt;/button&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-medium text-gray-900 mt-8 mb-4">Benefits of Utility-First</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                            <li>You aren't wasting energy inventing class names</li>
+                            <li>Your CSS stops growing exponentially</li>
+                            <li>Making changes feels much safer</li>
+                            <li>You're building a design system, not painting by numbers</li>
+                        </ul>
+                    </section>
+
+                    <!-- Responsive Design Section -->
+                    <section id="responsive-design" class="mb-12">
+                        <h2 class="text-2xl font-semibold text-gray-900 mb-6">Responsive Design</h2>
+                        
+                        <p class="text-gray-700 mb-4">
+                            Tailwind uses a mobile-first breakpoint system. By default, styles take effect at all screen sizes, and you can conditionally apply styles at larger sizes using responsive prefixes:
+                        </p>
+
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                            <h4 class="text-lg font-medium text-gray-900 mb-4">Responsive Grid Example</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                                <div class="bg-blue-100 p-4 rounded text-center">Column 1</div>
+                                <div class="bg-blue-200 p-4 rounded text-center">Column 2</div>
+                                <div class="bg-blue-300 p-4 rounded text-center">Column 3</div>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg p-4">
+                                <pre class="text-sm text-gray-200 overflow-x-auto"><code>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"&gt;
+    &lt;div&gt;Column 1&lt;/div&gt;
+    &lt;div&gt;Column 2&lt;/div&gt;
+    &lt;div&gt;Column 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-medium text-gray-900 mt-8 mb-4">Breakpoint Prefixes</h3>
+                        <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
+                            <table class="min-w-full divide-y divide-gray-300">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Prefix</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Min Width</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CSS</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">sm</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">640px</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-500">@media (min-width: 640px)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">md</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">768px</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-500">@media (min-width: 768px)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900">lg</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1024px</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-500">@media (min-width: 1024px)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+<p><a href="../index.html">Back to Home page</a></p>
+</body>
+</html>
+
