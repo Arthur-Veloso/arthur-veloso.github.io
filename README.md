@@ -1,2 +1,2 @@
-# Arthur-Veloso.github.io
+# arthur-veloso.github.io
 My Website | 
