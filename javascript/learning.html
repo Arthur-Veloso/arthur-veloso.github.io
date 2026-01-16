@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Essentials Guide</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-primary: #38bdf8;
+            --accent-secondary: #fbbf24;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --code-bg: #000000;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 2px solid var(--accent-primary);
+            padding-bottom: 20px;
+            margin-bottom: 50px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: var(--text-main); }
+        h2 { color: var(--accent-primary); font-size: 1.8rem; margin-top: 40px; }
+        h3 { color: var(--accent-secondary); font-size: 1.2rem; }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+        }
+
+        code {
+            background: var(--code-bg);
+            color: #f472b6;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+
+        pre {
+            background: var(--code-bg);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            color: #e2e8f0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        
+        strong { color: var(--accent-primary); }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+          .video-container {
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background-color: var(--code-bg);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+}
+
+video {
+    width: 100%;
+    display: block;
+    outline: none;
+}
+
+
+.pdf-container {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden; /* Clips the sharp corners of the PDF viewer */
+    border: 1px solid var(--border);
+    background-color: var(--code-bg);
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.pdf-container embed {
+    display: block;
+    border: none;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>JavaScript Fundamentals</h1>
+        <p style="color: var(--text-muted)">Core concepts for modern web development.</p>
+
+      <img src="assets/img/unnamed.png" alt="">
+
+      <div class="video-container">
+    <video controls width="100%"
+        source src="assets/img/JavaScript_Demystified.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+          <div class="audio-card">
+                <h3>Tutorial Podcast</h3>
+                 <p class="audio-desc">Listen to the audio summary of this JavaScript guide.</p>
+                     <audio controls>
+                      <source src="assets/img/JavaScript_Fundamentals_Variables_Data_Types_Performance.m4a" type="audio/mp4">
+                            Your browser does not support the audio element.
+                 </audio>
+
+        <div class="card">
+    <span class="tag">DOCUMENT</span>
+    <h3>JavaScript Reference Manual</h3>
+    <p class="audio-desc">View or download the full documentation below.</p>
+    
+    <div class="pdf-container">
+        <embed src="assets/img/JavaScript_First_Steps.pdf" type="application/pdf" width="100%" height="600px" />
+    </div>
+</div>
+
+        
+</div>
+
+</div>
+
+    </header>
+
+    <section>
+        <h2>Setup & Debugging</h2>
+        <div class="grid-layout">
+            <div class="card">
+                <span class="tag">INTEGRATION</span>
+                <h3>Loading Scripts</h3>
+                <p>For best performance, place scripts at the end of the <code>&lt;body&gt;</code> or use the <code>defer</code> attribute. This ensures <strong>non-blocking</strong> behavior so your page content loads first.</p>
+            </div>
+            <div class="card">
+                <span class="tag">DEVTOOLS</span>
+                <h3>The Console</h3>
+                <p>Use <code>console.log()</code> to inspect variables. Access the browser console using <code>Ctrl + Shift + i</code> (Windows) or <code>Cmd + Opt + i</code> (Mac).</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Variables & Types</h2>
+        <div class="card">
+            <p>JavaScript is <strong>loosely-typed</strong>, meaning you don't declare the data type explicitly. A single variable can hold different types over time.</p>
+            <div class="grid-layout">
+                <div>
+                    <h3>Declaration</h3>
+                    <ul>
+                        <li><code>let</code>: Use for values that will change (re-assignable).</li>
+                        <li><code>const</code>: Use for constant values (read-only).</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Common Data Types</h3>
+                    <ul>
+                        <li><strong>String:</strong> <code>"Hello World"</code></li>
+                        <li><strong>Number:</strong> <code>42</code> or <code>9.99</code></li>
+                        <li><strong>Boolean:</strong> <code>true</code> or <code>false</code></li>
+                        <li><strong>Null:</strong> <code>null</code> (Deliberate empty value)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Operations & Precedence</h2>
+        <div class="grid-layout">
+            <div class="card">
+                <h3>Arithmetic</h3>
+                <p>JavaScript follows the standard order of operations: Division/Multiplication first, then Addition/Subtraction.</p>
+                <pre>let total = (5 + 2) * 3; // 21</pre>
+            </div>
+            <div class="card">
+                <h3>String Methods</h3>
+                <p>Transform text using methods like <code>.trim()</code>, <code>.slice()</code>, or <code>.toUpperCase()</code>. Note: These methods return a <strong>new string</strong> and do not modify the original.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Modern Syntax</h2>
+        <div class="card">
+            <h3>Template Literals</h3>
+            <p>Combine variables and literals seamlessly using backticks and the <code>${}</code> syntax.</p>
+            <pre>const user = "John";
+console.log(`Welcome back, ${user}!`);</pre>
+            
+            <h3>Compound Assignment</h3>
+            <p>The <code>+=</code> operator adds the right-side value to the variable on the left and assigns the result back.</p>
+            <pre>let score = 100;
+score += 50; // New score is 150</pre>
+        </div>
+    </section>
+
+    <footer style="margin-top: 60px; text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+        <p>&copy; 2026 Web Development Tutorials. All rights reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>
